@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 220" role="img" aria-labelledby="nexoraTitle nexoraDesc">
+  <title id="nexoraTitle">Nexora logo</title>
+  <desc id="nexoraDesc">Gradient N mark with orbital rings and NEXORA wordmark.</desc>
+  <defs>
+    <linearGradient id="orbital" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58e9ff"/>
+      <stop offset="55%" stop-color="#2f86ff"/>
+      <stop offset="100%" stop-color="#9250ff"/>
+    </linearGradient>
+    <linearGradient id="wordmark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="28%" stop-color="#73dcff"/>
+      <stop offset="62%" stop-color="#3a83ff"/>
+      <stop offset="100%" stop-color="#a75eff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(24 18)">
+    <ellipse cx="92" cy="90" rx="80" ry="46" fill="none" stroke="url(#orbital)" stroke-width="8" opacity=".95"/>
+    <ellipse cx="92" cy="90" rx="82" ry="44" transform="rotate(-32 92 90)" fill="none" stroke="url(#orbital)" stroke-width="6" opacity=".86"/>
+    <circle cx="20" cy="40" r="8" fill="#66e8ff"/>
+    <circle cx="164" cy="34" r="10" fill="#55d5ff"/>
+    <circle cx="184" cy="126" r="9" fill="#9153ff"/>
+    <path filter="url(#softGlow)" fill="url(#orbital)" d="M58 40h30l34 43V40h29v108h-28L88 103l-2 45H57z"/>
+  </g>
+
+  <text x="244" y="136" font-size="92" font-family="Readex Pro, Arial, sans-serif" font-weight="700" letter-spacing="5" fill="url(#wordmark)">
+    NEXORA
+  </text>
+</svg>
