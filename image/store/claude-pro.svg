@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+  <title id="t">Claude Pro Activation</title>
+  <desc id="d">Product card image for Claude Pro monthly activation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25150e"/>
+      <stop offset="100%" stop-color="#442312"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffc880"/>
+      <stop offset="100%" stop-color="#ff8f5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="170" fill="#ffca78" opacity=".18"/>
+  <circle cx="160" cy="640" r="220" fill="#ff7f50" opacity=".14"/>
+  <rect x="110" y="92" rx="18" ry="18" width="230" height="52" fill="url(#chip)"/>
+  <text x="145" y="126" fill="#2d170b" font-size="28" font-family="Arial, sans-serif" font-weight="700">AI Activation</text>
+  <text x="110" y="300" fill="#fff7ee" font-size="82" font-family="Arial, sans-serif" font-weight="700">Claude Pro</text>
+  <text x="110" y="368" fill="#ffcfac" font-size="34" font-family="Arial, sans-serif">Advanced Writing and Reasoning</text>
+  <text x="110" y="512" fill="#ffb97d" font-size="70" font-family="Arial, sans-serif" font-weight="700">350 EGP / Month</text>
+  <rect x="110" y="570" width="450" height="10" fill="#ffbe7a" opacity=".45"/>
+</svg>

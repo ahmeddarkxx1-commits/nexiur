@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الدفع عبر فودافون كاش | Nexora</title>
+  <meta name="description" content="صفحة تحويل فودافون كاش مع إرسال صورة الإيصال إلى Gmail.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="loaded">
+  <header class="nav-wrap" id="navWrap">
+    <nav class="container nav" aria-label="التنقل الرئيسي">
+      <a href="index.html" class="brand" aria-label="Nexora">
+        <img class="brand-logo" src="image/nexora-logo.svg" alt="Nexora">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#store">المتجر</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="checkout-page">
+    <section class="section">
+      <div class="container checkout-shell">
+        <div class="checkout-main">
+          <div class="section-head">
+            <p class="eyebrow">Vodafone Cash Payment</p>
+            <h1>الدفع عبر فودافون كاش</h1>
+            <p class="sub">بعد التحويل ارفع صورة الإيصال وسيتم إرسالها مباشرة إلى Gmail.</p>
+          </div>
+
+          <div class="stepper" aria-label="خطوات الدفع">
+            <button class="step active" type="button">Step 1: حول المبلغ</button>
+            <button class="step active" type="button">Step 2: ارفع الإيصال</button>
+            <button class="step active" type="button">Step 3: إرسال للمراجعة</button>
+          </div>
+
+          <div class="manual-panel">
+            <h3>بيانات التحويل</h3>
+            <p><strong>رقم التحويل:</strong> <span id="vodafoneNumber">01000000000</span></p>
+            <p><strong>المبلغ المطلوب:</strong> <span id="exactAmount">0 EGP</span></p>
+            <img id="vodafoneQr" alt="Vodafone Cash QR" class="proof-thumb" style="width:130px;height:130px;">
+            <p class="field-note">حوّل نفس المبلغ الظاهر ثم ارفع Screenshot واضح.</p>
+          </div>
+
+          <div id="checkoutError" class="checkout-error" role="alert" aria-live="polite"></div>
+
+          <form id="gmailProofForm" method="POST" enctype="multipart/form-data" novalidate>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" id="mailSubject" value="Nexora Vodafone Cash Payment Proof">
+            <input type="hidden" name="order_id" id="orderIdField">
+            <input type="hidden" name="total_amount" id="amountField">
+
+            <div class="checkout-grid-2">
+              <div>
+                <label for="customerName">اسم العميل</label>
+                <input id="customerName" name="customer_name" type="text" required>
+              </div>
+              <div>
+                <label for="transferMobile">رقم الموبايل المستخدم في التحويل</label>
+                <input id="transferMobile" name="transfer_mobile" type="tel" required>
+              </div>
+              <div>
+                <label for="last3Digits">آخر 3 أرقام من رقم الموبايل المحول منه</label>
+                <input id="last3Digits" name="last_3_digits" type="text" maxlength="3" pattern="[0-9]{3}" required>
+              </div>
+              <div>
+                <label for="paymentProof">رفع صورة إيصال الدفع</label>
+                <input id="paymentProof" name="attachment" type="file" accept="image/*" required>
+              </div>
+            </div>
+
+            <p class="field-note">يتم تفعيل الطلب بعد التأكد من التحويل المالي عبر فودافون كاش.</p>
+
+            <div class="checkout-support">
+              <span>تحتاج مساعدة أثناء التحويل؟</span>
+              <a class="btn btn-whatsapp btn-sm" href="https://wa.me/201000000000" target="_blank" rel="noopener">دعم واتساب</a>
+            </div>
+
+            <div class="step-actions">
+              <button type="submit" class="btn btn-glow">إتمام الشراء</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="checkout-summary" id="checkoutSummary">
+          <h3>ملخص الطلب</h3>
+          <div id="checkoutItems" class="cart-items">لا توجد عناصر.</div>
+          <div class="summary-line summary-total"><span>Total</span><strong id="summaryTotal">0 EGP</strong></div>
+          <p class="cart-note">جارٍ مراجعة التحويل وسيتم تفعيل طلبك خلال فترة قصيرة.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="successOverlay" class="success-overlay" hidden>
+    <div class="success-card">
+      <div class="success-icon"></div>
+      <h2>تم استلام طلب التحويل</h2>
+      <p>جارٍ مراجعة التحويل وسيتم تفعيل طلبك خلال فترة قصيرة</p>
+      <button class="btn" id="closeSuccessBtn">العودة للمتجر</button>
+    </div>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/201000000000" target="_blank" rel="noopener" aria-label="دعم واتساب">
+    WhatsApp
+  </a>
+
+  <script src="checkout.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+  <title id="t">Unlock Tool Activation</title>
+  <desc id="d">Product card image for Unlock Tool monthly activation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081a2f"/>
+      <stop offset="100%" stop-color="#0f2f58"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8ec0ff"/>
+      <stop offset="100%" stop-color="#58a5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="170" fill="#89c8ff" opacity=".18"/>
+  <circle cx="170" cy="640" r="220" fill="#4a9dff" opacity=".15"/>
+  <rect x="110" y="92" rx="18" ry="18" width="285" height="52" fill="url(#chip)"/>
+  <text x="144" y="126" fill="#0c2340" font-size="28" font-family="Arial, sans-serif" font-weight="700">Software Activation</text>
+  <text x="110" y="300" fill="#f2f8ff" font-size="82" font-family="Arial, sans-serif" font-weight="700">Unlock Tool</text>
+  <text x="110" y="368" fill="#a9c8ea" font-size="34" font-family="Arial, sans-serif">Official Monthly Access</text>
+  <text x="110" y="512" fill="#8fd0ff" font-size="70" font-family="Arial, sans-serif" font-weight="700">500 EGP / Month</text>
+  <rect x="110" y="570" width="450" height="10" fill="#8fd0ff" opacity=".45"/>
+</svg>
